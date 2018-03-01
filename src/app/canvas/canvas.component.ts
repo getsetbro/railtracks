@@ -28,6 +28,7 @@ import 'rxjs/add/operator/switchMap';
   templateUrl: './canvas.component.html',
   styleUrls: ['./canvas.component.css']
 })
+
 export class CanvasComponent implements AfterViewInit {
 
   @ViewChild('canvas') public canvas: ElementRef;
@@ -52,8 +53,7 @@ export class CanvasComponent implements AfterViewInit {
   }
 
   private captureEvents(canvasEl: HTMLCanvasElement) {
-    Observable
-      .fromEvent(canvasEl, 'mousedown')
+    Observable.fromEvent(canvasEl, 'mousedown')
       .switchMap((e) => {
         return Observable
           .fromEvent(canvasEl, 'mousemove')
