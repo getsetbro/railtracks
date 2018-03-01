@@ -10,6 +10,7 @@ export class AnnotateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
